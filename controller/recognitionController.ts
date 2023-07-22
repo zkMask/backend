@@ -8,8 +8,8 @@ exports.recognize = async (req: any, res: any, next: any) => {
     const tempFolder = path.join(__dirname, "/../", "/temps");
 
     //Write base64 image to file
-    const base64Data = image.replace(/^data:image\/png;base64,/, "");
-    fs.writeFileSync(`${tempFolder}/temp.png`, base64Data, "base64");
+    const base64Data = await image.replace(/^data:image\/png;base64,/, "");
+    await fs.writeFileSync(`${tempFolder}/temp.png`, base64Data, "base64");
 
     if (!image) {
       return res.status(400).json({ status: "fail", message: "No image" });
@@ -17,7 +17,7 @@ exports.recognize = async (req: any, res: any, next: any) => {
     const db_path = path.join(__dirname, "/../", "/uploads").toString();
     const folderLocation = path.join(__dirname, "/../", "main.py");
     const python = spawn(
-      "python3",
+      "python",
       [folderLocation, path.join(tempFolder, "/temp.png"), db_path],
       {
         maxBuffer: 1024 * 1024 * 1000,

@@ -1,4 +1,4 @@
-const express = require("express");
+import express from "express";
 const hashControllers = require("../controller/hashControllers");
 
 const router = express.Router();

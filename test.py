@@ -1,7 +1,7 @@
 from deepface import DeepFace
 import cv2
 
-db_path = "/home/samarendra/Desktop/sample-rn-app/zkFace/backend/uploads"
+db_path = "./uploads"
 def recognize(img):
     recognized = DeepFace.find(img_path = img, db_path = db_path)
     if(len(recognized) == 0):
@@ -13,5 +13,5 @@ def recognize(img):
     print(result_id)
 
 
-result = recognize("/home/samarendra/Desktop/sample-rn-app/zkFace/backend/temps/temp.png")
+result = recognize("./temps/temp.png")
 print(result)
