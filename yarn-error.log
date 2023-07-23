@@ -1,0 +1,59 @@
+Arguments: 
+  /home/samarendra/.nvm/versions/node/v18.10.0/bin/node /home/samarendra/.nvm/versions/node/v18.10.0/bin/yarn add snarkjs circomlibjs
+
+PATH: 
+  /home/samarendra/.nvm/versions/node/v18.10.0/bin:/home/samarendra/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/samarendra/Android/Sdk/emulator:/home/samarendra/Android/Sdk/platform-tools:/home/samarendra/Android/Sdk/emulator:/home/samarendra/Android/Sdk/platform-tools
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  18.10.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: connect ENETUNREACH 104.16.25.35:443 - Local (0.0.0.0:0)
+      at internalConnect (node:net:1053:16)
+      at defaultTriggerAsyncIdScope (node:internal/async_hooks:464:18)
+      at emitLookup (node:net:1209:9)
+      at /home/samarendra/.nvm/versions/node/v18.10.0/lib/node_modules/yarn/lib/cli.js:103587:28
+      at /home/samarendra/.nvm/versions/node/v18.10.0/lib/node_modules/yarn/lib/cli.js:103496:13
+      at module.exports.RawTask.call (/home/samarendra/.nvm/versions/node/v18.10.0/lib/node_modules/yarn/lib/cli.js:79584:19)
+      at flush (/home/samarendra/.nvm/versions/node/v18.10.0/lib/node_modules/yarn/lib/cli.js:79666:29)
+      at processTicksAndRejections (node:internal/process/task_queues:77:11)
+      at runNextTicks (node:internal/process/task_queues:64:3)
+      at process.processImmediate (node:internal/timers:442:9)
+
+npm manifest: 
+  {
+    "dependencies": {
+      "body-parser": "^1.20.2",
+      "circomlibjs": "^0.1.7",
+      "cors": "^2.8.5",
+      "crypto-ts": "^1.0.2",
+      "dotenv": "^16.3.1",
+      "express": "^4.18.2",
+      "mongoose": "^7.3.4",
+      "morgan": "^1.10.0",
+      "nodemon": "^3.0.1",
+      "ts-node": "^10.9.1"
+    },
+    "name": "backend",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "nodemon server.ts"
+    },
+    "author": "",
+    "license": "ISC",
+    "description": ""
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

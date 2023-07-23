@@ -1,6 +1,7 @@
 const dotenv = require("dotenv");
 const App = require("./app.ts");
 const mongoose = require("mongoose");
+const http = require("./app.ts");
 
 dotenv.config();
 
@@ -30,6 +31,6 @@ mongoose
 
 const PORT = process.env.PORT || 4000;
 
-App.listen(PORT, () => {
+http.listen(PORT, () => {
   console.log("Server Started on Port", PORT);
 });
